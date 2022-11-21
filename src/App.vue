@@ -69,6 +69,7 @@ nav a.router-link-exact-active {
 }
 
 footer.bottom {
+  border-top-left-radius: 80px 80px;
   position: fixed;
   background-color: white;
   z-index: 9;
