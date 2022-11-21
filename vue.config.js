@@ -17,5 +17,8 @@ module.exports = defineConfig({
       compositionOnly: false,
       fullInstall: true
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/xiao/'
+    : '/'
 })
