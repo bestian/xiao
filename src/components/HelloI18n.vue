@@ -1,5 +1,5 @@
 <template>
-  <p>{{ t('hello') }}</p>
+  <h2>{{ t('xiao') }}</h2>
 </template>
 
 <script>

@@ -1,9 +1,24 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template lang="pug">
+  #app
+    sui-menu#nav-bar.no-print(:widths="7" inverted="")
+      sui-menu-item
+        router-link(to="/")
+          sui-icon(name="home")
+          span.fat-only {{ $t('home') }}
+      sui-menu-item
+        router-link(to="/about")
+          sui-icon.fat-only(name="user")
+          span {{ $t('about_me') }}
+      sui-menu-item
+        router-link(to="/comments")
+          sui-icon.fat-only(name="comments")
+          span.fat-only {{ $t('clients') }}
+          span {{ $t('comments') }}
+      sui-menu-item
+        router-link(to="/course")
+          sui-icon.fat-only(name="users")
+          span {{ $t('courses') }}
+    router-view
 </template>
 
 <style>
