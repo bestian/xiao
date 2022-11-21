@@ -1,7 +1,12 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-
+  pwa: {
+    workboxOptions: {
+      exclude: [/\.gitkeep/],
+      skipWaiting: true
+    }
+  },
   pluginOptions: {
     i18n: {
       locale: 'zh-TW',
