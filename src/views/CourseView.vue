@@ -9,6 +9,22 @@
         img.main(src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/315857900_2449523775205305_6208987748763611522_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=bb0nPcB9aUIAX8wNsXD&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfC7aN8xg0Z--K59b9nCLVGSJixEtPkr551fqX5HhpArkg&oe=63807DB8", alt="teacher")
 </template>
 
+<script type="text/javascript">
+  
+import { defineComponent } from 'vue'
+import { useHead } from 'unhead'
+
+export default defineComponent({
+  name: 'CourSe',
+  mounted () {
+    useHead({
+      title: this.$t('courses') + ' | ' + this.$t('xiao')
+    })    
+  }
+})
+
+</script>
+
 <style type="text/css" scoped>
   .main {
     width: 100%;

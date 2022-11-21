@@ -32,12 +32,11 @@
 import { defineComponent } from 'vue'
 import { useHead } from 'unhead'
 
-
 export default defineComponent({
   name: 'App',
   mounted () {
     useHead({
-      title: this.$t('title') + this.$t('xiao')
+      title: this.$t('title') + ' | ' + this.$t('xiao')
     })    
   }
 })
@@ -50,6 +49,10 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.ui.menu a.item {
+  color: white;
 }
 
 nav a {

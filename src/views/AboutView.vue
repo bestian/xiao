@@ -16,6 +16,22 @@
         p.note ※ 如需包場用餐，或客製包班課程，請另私訊安排
 </template>
 
+<script type="text/javascript">
+  
+import { defineComponent } from 'vue'
+import { useHead } from 'unhead'
+
+export default defineComponent({
+  name: 'AbOut',
+  mounted () {
+    useHead({
+      title: this.$t('about_me') + ' | ' + this.$t('xiao')
+    })    
+  }
+})
+
+</script>
+
 <style type="text/css" scoped>
   .main {
     width: 100%;
