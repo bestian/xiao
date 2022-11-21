@@ -51,6 +51,11 @@ export default defineComponent({
   color: #2c3e50;
 }
 
+nav.ui.menu {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
 .ui.menu a.item {
   color: white;
 }
