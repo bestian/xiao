@@ -6,27 +6,42 @@
       span.fat-only {{ $t('home') }}
     router-link.item(to="/about")
       i.user.icon
-      span {{ $t('about_me') }}
+      span.fat-only {{ $t('about_me') }}
     router-link.item(to="/course")
       i.users.icon
-      span {{ $t('courses') }}
+      span.fat-only {{ $t('courses') }}
     router-link.item(to="/map")
       i.map.icon
-      span {{ $t('map') }}
+      span.fat-only {{ $t('map') }}
   router-view
   footer.bottom
     a(href="https://www.facebook.com/xiaoxiaoplace", target="_blank", rel="noopener noreferrer")
       i.facebook.icon
       | FB: 小小蔬房
     div
-      i.map.icon
-      | 地址: 台北市萬華區漢口街二段125號
+      router-link(to="/map")
+        i.map.icon
+        | 地址: 台北市萬華區漢口街二段125號
     div
-      i.phone.icon
-      | 電話: 02-2311-1168
-
-
+      a(href="tel:0223111168")
+        i.phone.icon
+        | 電話: 02-2311-1168
 </template>
+
+<script type="text/javascript">
+import { defineComponent } from 'vue'
+import { useHead } from 'unhead'
+
+
+export default defineComponent({
+  name: 'App',
+  mounted () {
+    useHead({
+      title: this.$t('title') + this.$t('xiao')
+    })    
+  }
+})
+</script>
 
 <style>
 #app {
@@ -52,10 +67,39 @@ nav a.router-link-exact-active {
 
 footer.bottom {
   position: fixed;
+  background-color: white;
+  z-index: 9;
   bottom: 0;
   right: 0;
-  margin: 1em;
+  padding: 1em;
   text-align: left;
   width: 300px;
+}
+
+
+@media screen and (min-width: 661px) {
+  .thin-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .fat-only {
+    display: none !important;
+  }
+}
+
+.print-only {
+  visibility: hidden;
+}
+
+@media print {
+  .no-print {
+    visibility: hidden;
+  }
+
+  .print-only {
+    visibility: visible;
+  }
 }
 </style>
