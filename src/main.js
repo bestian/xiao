@@ -3,7 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import i18n from './i18n'
-import { createHead } from "unhead"
+import { createHead } from 'unhead'
 
 // Create a global head instance
 createHead()
